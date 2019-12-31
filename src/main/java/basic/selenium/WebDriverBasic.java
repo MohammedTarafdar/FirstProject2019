@@ -7,8 +7,8 @@ public class WebDriverBasic {
 
     public static void main(String[] args) {
 
+
         System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver");
-        
 
         WebDriver driver = new ChromeDriver();
 
