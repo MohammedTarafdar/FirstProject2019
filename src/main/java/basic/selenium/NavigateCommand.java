@@ -12,13 +12,35 @@ public class NavigateCommand {
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
 
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+
+        }
         driver.navigate().to("https://bestbuy.com");
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+        }
 
         driver.navigate().back();
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+        }
 
         driver.navigate().forward();
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+        }
 
         driver.navigate().refresh();
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+        }
 
+        driver.quit();
     }
 }

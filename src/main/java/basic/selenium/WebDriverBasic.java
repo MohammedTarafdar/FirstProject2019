@@ -13,7 +13,12 @@ public class WebDriverBasic {
         driver.get("https://www.bestbuy.com");
 
         driver.manage().window().fullscreen();
-        //Thread.sleep(5000);
+
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+        }
+
         driver.quit();
 
 

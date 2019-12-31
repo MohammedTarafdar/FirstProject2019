@@ -27,6 +27,13 @@ public class DriverManager {
             System.out.println("Page title is incorrect");
         }
 
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+
+        }
+
+
         driver.close();
         driver.quit();
 
