@@ -12,9 +12,12 @@ public class CrossBrowser {
     public static void main(String[] args) {
 
         CrossBrowser obj = new CrossBrowser();
-        //WebDriver driver = obj.initDriver("chrome");
-        WebDriver driver = obj.initDriver("firefox");
-        driver.get("https://www.bestbuy.com");
+
+        obj.initDriver("chrome");
+        obj.launchURL("https://www.bestbuy.com");
+        String title = obj.getPageTitle();
+        System.out.println(title);
+        obj.quitBrowser();
 
     }
 
@@ -39,7 +42,21 @@ public class CrossBrowser {
 
     }
 
+    public void launchURL(String url){
+        driver.get(url);
+    }
 
+    public String getPageTitle(){
+        return driver.getTitle();
+    }
+
+    public void closeBrowser(){
+        driver.close();
+    }
+
+    public void quitBrowser(){
+        driver.quit();
+    }
 
 
 }
